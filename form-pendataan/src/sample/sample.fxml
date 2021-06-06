@@ -1,0 +1,76 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <!--Judul-->
+    <Label text="PENDATAAN MAHASISWA"></Label>
+
+    <!--VBOX untuk input nim-->
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <Label text="NIM"></Label>
+        <TextField fx:id="tfNim" promptText="Masukan Nim" focusTraversable="false"></TextField>
+    </VBox>
+
+    <!--VBOX untuk input nama-->
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Label text="NAMA"></Label>
+        <TextField fx:id="tfNama" promptText="Masukan Nama" focusTraversable="false"></TextField>
+    </VBox>
+
+    <!--VBOX untuk input alamat-->
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="3">
+        <Label text="ALAMAT"></Label>
+        <TextField fx:id="tfAlamat" promptText="Masukan Alamat" focusTraversable="false"></TextField>
+    </VBox>
+
+    <Button fx:id="btnSubmit" text="Submit" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="4"
+    onAction="#onButtonSubmitClicked"></Button>
+
+    <!--Tabel view untuk menampilkan data user-->
+    <TableView fx:id="tvDataMhs" GridPane.columnIndex="0" GridPane.rowIndex="5" maxHeight="150">
+        <!--Kolom didalam table-->
+        <columns>
+            <!--Kolom Nim-->
+            <TableColumn text="NIM">
+                <cellValueFactory>
+                    <PropertyValueFactory property="nim"></PropertyValueFactory>
+                </cellValueFactory>
+            </TableColumn>
+
+            <!--Kolom Nama-->
+            <TableColumn text="Nama">
+                <cellValueFactory>
+                    <PropertyValueFactory property="nama"></PropertyValueFactory>
+                </cellValueFactory>
+            </TableColumn>
+
+            <!--Kolom alamat-->
+            <TableColumn text="Alamat">
+                <cellValueFactory>
+                    <PropertyValueFactory property="alamat"></PropertyValueFactory>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <!--Button untuk save dan load-->
+    <HBox GridPane.rowIndex="6" GridPane.columnIndex="0" spacing="20">
+        <Button fx:id="btnSave" text="Save" textAlignment="CENTER" onAction="#onBtnSaveClicked"/>
+        <Button fx:id="btnLoad" text="Load" textAlignment="CENTER" onAction="#onBtnLoadClicked"/>
+    </HBox>
+
+
+
+
+
+
+</GridPane>

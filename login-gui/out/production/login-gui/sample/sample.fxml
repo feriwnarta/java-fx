@@ -1,0 +1,33 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <Label text="Login Aplikasi" textFill="blue" GridPane.columnIndex="0" GridPane.rowIndex="0"></Label>
+
+    <!--Text Fields untuk user ini usernam dan passowrd-->
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <Label text="Username" textFill="red"></Label>
+        <TextField fx:id="tfUsername" promptText="Masukan username" focusTraversable="false"></TextField>
+        <Label text="Password" textFill="red"></Label>
+        <TextField fx:id="tfPassword" promptText="Masukan Password" focusTraversable="false"></TextField>
+    </VBox>
+
+    <!--Button login dan register-->
+    <HBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Button fx:id="btnLogin" text="Login" textAlignment="CENTER" onAction="#OnButtoClickedLogin" ></Button>
+        <Button fx:id="btnRegister" text="Register" textAlignment="CENTER" onAction="#OnButtoClickedRegister"></Button>
+    </HBox>
+
+    <!--    Pemberitahuan login atau register-->
+    <HBox GridPane.rowIndex="3" GridPane.columnIndex="0">
+        <Label fx:id="succesLogin"> </Label>
+    </HBox>
+
+</GridPane>

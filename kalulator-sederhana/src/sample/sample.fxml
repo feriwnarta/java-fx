@@ -1,0 +1,38 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <!--Judul Program-->
+    <Label text="KALKULATOR SEDERHANA" textFill="black" GridPane.rowIndex="0"
+               GridPane.columnIndex="0"/>
+
+    <!--Input Bilangan Pertama-->
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <Label text="masukan bilangan pertama"></Label>
+        <TextField fx:id="tf1" promptText="bilangan pertama" focusTraversable="false"></TextField>
+        <Label text="masukan bilangan kedua"></Label>
+        <TextField fx:id="tf2" promptText="bilangan kedua" focusTraversable="false"></TextField>
+    </VBox>
+
+    <!--Button operasi-->
+    <HBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Button fx:id="btnTambah" text="Tambah" textAlignment="CENTER" textFill="blue" onAction="#onButtonClicked"></Button>
+        <Button fx:id="btnKurang" text="Kurang" textAlignment="CENTER" textFill="blue" onAction="#onButtonClicked"></Button>
+        <Button fx:id="btnKali" text="Kali" textAlignment="CENTER" textFill="blue" onAction="#onButtonClicked"></Button>
+        <Button fx:id="btnBagi" text="Bagi" textAlignment="CENTER" textFill="blue" onAction="#onButtonClicked"></Button>
+    </HBox>
+
+    <!--Hasil-->
+    <!--Input Bilangan Pertama-->
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="3">
+        <Label text="tfHasil"></Label>
+        <TextField fx:id="tfHasil" disable="true"></TextField>
+    </VBox>
+</GridPane>

@@ -1,0 +1,18 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.RadioButton?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <VBox>
+        <RadioButton fx:id="jeniskelamin1" text="Laki-Laki" textAlignment="JUSTIFY" textFill="red"></RadioButton>
+        <RadioButton fx:id="jeniskelamin2" text="Perempuan" textAlignment="JUSTIFY" textFill="red"></RadioButton>
+
+
+    </VBox>
+</GridPane>
